@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTI700 — Station MQTT</title><link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/mqtt.min.js"></script><script defer src="domain.js"></script>
+  <script defer src="config.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">GTI700 · LABORATOIRE 02</p><h1>Station MQTT</h1>
+      <p id="identity"></p><p id="error" role="alert"></p>
+      <div class="statuses"><span id="local-status">Local : connexion…</span><span id="public-status">Public : connexion…</span></div>
+    </header>
+    <section aria-labelledby="sensors-title"><h2 id="sensors-title">Mes capteurs</h2>
+      <p id="freshness" role="status">En attente des premières mesures.</p>
+      <table><thead><tr><th scope="col">Heure</th><th scope="col">Température</th><th scope="col">Humidité</th></tr></thead>
+      <tbody id="sensors"></tbody></table><p class="note">15 dernières lignes · heure locale de réception · — : valeur manquante</p>
+    </section>
+    <section aria-labelledby="alerts-title"><h2 id="alerts-title">Système d’alerte</h2>
+      <table><thead><tr><th scope="col">Équipe</th><th scope="col">Couleur</th></tr></thead><tbody id="alerts"></tbody></table>
+      <p class="note">Les cases affichent la dernière alerte reçue. Survolez une case pour voir sa valeur RGB et son heure.</p>
+    </section>
+  </main>
+</body>
+</html>

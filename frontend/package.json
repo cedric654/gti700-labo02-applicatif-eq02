@@ -1,0 +1,15 @@
+{
+  "name": "gti700-lab2-frontend-tools",
+  "private": true,
+  "scripts": {
+    "postinstall": "node scripts/copy-browser-client.js",
+    "demo:brokers": "node scripts/dev-brokers.js"
+  },
+  "dependencies": {
+    "mqtt": "5.10.4"
+  },
+  "devDependencies": {
+    "aedes": "0.51.3",
+    "websocket-stream": "5.5.2"
+  }
+}

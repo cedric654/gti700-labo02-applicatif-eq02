@@ -1,0 +1,19 @@
+[project]
+name = "gti700-backend"
+version = "1.0.0"
+description = "Backend MQTT et matériel pour GTI700"
+requires-python = ">=3.10"
+dependencies = [
+    "paho-mqtt>=2.1,<3",
+    "python-dotenv>=1,<2",
+]
+
+[project.optional-dependencies]
+hardware = [
+    "adafruit-circuitpython-dht==4.0.9",
+    "gpiozero==2.0.1",
+    "lgpio==0.2.2.0; sys_platform == 'linux'",
+]
+
+[tool.uv]
+package = false
